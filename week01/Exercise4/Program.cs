@@ -3,7 +3,7 @@ using System.Collections.Generic; // Required for using List<T>
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
         // Create a list to store the numbers entered by the user
         List<int> numbers = new List<int>();

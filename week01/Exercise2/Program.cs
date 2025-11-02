@@ -2,7 +2,7 @@ using System;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
         // Ask for grade percentage
         Console.Write("What is your grade percentage? ");

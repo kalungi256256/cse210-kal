@@ -2,7 +2,7 @@ using System;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
         // Call each function in order and pass data as needed
         DisplayWelcome();

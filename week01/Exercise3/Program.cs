@@ -2,7 +2,7 @@ using System;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
         // Create a Random object for generating random numbers
         Random randomGenerator = new Random();
