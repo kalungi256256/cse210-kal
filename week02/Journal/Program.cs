@@ -1,9 +1,11 @@
+// Program.cs - entry point for Journal application
 using System;
 
-class Program
+public class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the Journal Project.");
+        JournalProgram app = new JournalProgram();
+        app.Run();
     }
-}
+} 
