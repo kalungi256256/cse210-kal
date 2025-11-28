@@ -1,0 +1,29 @@
+
+
+Explain Inheritance
+
+Inheritance is an object-oriented programming principle where one class (the child or derived class) receives properties and methods from another class (the parent or base class). It allows developers to build upon existing code instead of rewriting common functionality. This principle is important because it reduces duplication, improves maintainability, and creates a logical structure in a program. A key benefit of inheritance is code reuse-shared logic is written once in the base class and automatically reused by all derived classes.
+
+In my program, I used inheritance by creating a base Activity class that contains shared behaviors such as Start() and End(). Then I created classes like BreathingActivity and ReflectionActivity that inherit those features while adding their own specialized methods.
+
+Here is an example of inheritance from my C# program:
+
+
+public class Activity
+{
+    public void Start()
+    {
+        Console.WriteLine("Activity starting...");
+    }
+}
+
+public class BreathingActivity : Activity
+{
+    public void Breathe()
+    {
+        Console.WriteLine("Breathe in and out slowly.");
+    }
+}
+
+
+BreathingActivity inherits the Start() method from Activity, showing how shared behavior is reused while still allowing the subclass to define its own unique actions.

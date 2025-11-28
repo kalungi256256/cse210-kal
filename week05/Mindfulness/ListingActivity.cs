@@ -14,15 +14,15 @@ public class ListingActivity : Activity
     };
     
     private Random _random = new Random();
-    
-    public ListingActivity()
+
+    public ListingActivity() : base(
+        "Listing",
+        "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.")
     {
-        _name = "Listing";
-        _description = "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.";
         _count = 0;
     }
-    
-    public void Run()
+
+    public override void RunActivity()
     {
         DisplayStartingMessage();
         
@@ -33,7 +33,7 @@ public class ListingActivity : Activity
         Console.WriteLine();
         
         DateTime startTime = DateTime.Now;
-        DateTime endTime = startTime.AddSeconds(_duration);
+        DateTime endTime = startTime.AddSeconds(Duration);
         
         while (DateTime.Now < endTime)
         {
@@ -46,7 +46,7 @@ public class ListingActivity : Activity
         
         DisplayEndingMessage();
     }
-    
+
     private string GetRandomPrompt()
     {
         return _prompts[_random.Next(_prompts.Count)];

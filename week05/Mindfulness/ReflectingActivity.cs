@@ -25,14 +25,14 @@ public class ReflectingActivity : Activity
     };
     
     private Random _random = new Random();
-    
-    public ReflectingActivity()
+
+    public ReflectingActivity() : base(
+        "Reflecting",
+        "This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.")
     {
-        _name = "Reflecting";
-        _description = "This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.";
     }
-    
-    public void Run()
+
+    public override void RunActivity()
     {
         DisplayStartingMessage();
         
@@ -50,7 +50,7 @@ public class ReflectingActivity : Activity
         Console.Clear();
         
         DateTime startTime = DateTime.Now;
-        DateTime endTime = startTime.AddSeconds(_duration);
+        DateTime endTime = startTime.AddSeconds(Duration);
         
         while (DateTime.Now < endTime)
         {
@@ -61,12 +61,12 @@ public class ReflectingActivity : Activity
         
         DisplayEndingMessage();
     }
-    
+
     private string GetRandomPrompt()
     {
         return _prompts[_random.Next(_prompts.Count)];
     }
-    
+
     private string GetRandomQuestion()
     {
         return _questions[_random.Next(_questions.Count)];
